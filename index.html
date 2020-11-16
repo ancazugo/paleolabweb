@@ -1,12 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f826908bef7b40048a945813e6c8da99 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_f826908bef7b40048a945813e6c8da99" ></div>
+        
 </body>
-</html>
+<script>    
+    
+            var map_f826908bef7b40048a945813e6c8da99 = L.map(
+                "map_f826908bef7b40048a945813e6c8da99",
+                {
+                    center: [4.740165, -73.980105],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_095d42b889ae4c709847f387ffa1b650 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f826908bef7b40048a945813e6c8da99);
+        
+    
+            var marker_06319f7f76d145e08687b858ba0fd849 = L.marker(
+                [4.560674, -74.023756],
+                {}
+            ).addTo(map_f826908bef7b40048a945813e6c8da99);
+        
+    
+            marker_06319f7f76d145e08687b858ba0fd849.bindTooltip(
+                `<div>
+                     ['Andrés Zúñiga', 'Páramo El verjón']
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_214fc847bb80458b9eb53ed914b3ffd8 = L.marker(
+                [1.469315, -76.920484],
+                {}
+            ).addTo(map_f826908bef7b40048a945813e6c8da99);
+        
+    
+            marker_214fc847bb80458b9eb53ed914b3ffd8.bindTooltip(
+                `<div>
+                     ['Catalina González', 'Volcán Doña Juana']
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6c6f63002ac64921849569cf61e9d83c = L.marker(
+                [1.365161, -76.221651],
+                {}
+            ).addTo(map_f826908bef7b40048a945813e6c8da99);
+        
+    
+            marker_6c6f63002ac64921849569cf61e9d83c.bindTooltip(
+                `<div>
+                     ['Melissa Martínez', 'Cueva de los Guácharos']
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2681d5ddd8d044ceb855ad215691394a = L.marker(
+                [4.7175, -74.623333],
+                {}
+            ).addTo(map_f826908bef7b40048a945813e6c8da99);
+        
+    
+            marker_2681d5ddd8d044ceb855ad215691394a.bindTooltip(
+                `<div>
+                     ['Catalina González', 'Depósito Pereira']
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f4df95cec22f4555b13cef026714f70e = L.marker(
+                [10.842718, -74.500314],
+                {}
+            ).addTo(map_f826908bef7b40048a945813e6c8da99);
+        
+    
+            marker_f4df95cec22f4555b13cef026714f70e.bindTooltip(
+                `<div>
+                     ['Lina Gutiérrez', 'Ciénaga de Santa Marta']
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
