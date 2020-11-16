@@ -5,7 +5,7 @@ from folium import Map, Marker, Tooltip
 df = pd.read_csv('study_sites.csv', sep=';')
 
 # token = open("mapbox_token.txt").read()
-paleo_map = Map(location=[4.740165, -73.980105], tiles='Stamen Watercolor', zoom_start=6)
+paleo_map = Map(location=[4.740165, -73.980105], tiles='Stamen Watercolor', zoom_start=5)
 
 for index, row in df.iterrows():
     researcher = row['Researcher']
