@@ -1,6 +1,13 @@
-﻿Site;Latitude;Longitude;Researcher
-Paramo El verjon;4.560674;-74.023756;Andres Zuniga
-Volcan Dona Juana;1.469315;-76.920484;Catalina Gonzalez
-Cueva de los Guácharos;1.365161;-76.221651;Melissa Martinez
-Deposito Pereira;4.7175;-74.623333;Catalina Gonzalez
-Cienaga de Santa Marta;10.842718;-74.500314;Lina Gutierrez
+﻿Site;Latitude;Longitude;Description;Image
+Páramo El Verjón;4.560674;-74.023756; d13C, 14C dating, environmental DNA;verjon.jpg
+Volcán Doña Juana;1.469315;-76.920484; Socio-ecological history, drones;
+Cueva de los Guácharos;1.365161;-76.221651; d13C, guano;
+Fluvio-volcanic Deposit in Pereira;4.680480;-75.638380; GDGTs, sub-fossil wood, ancient DNA, wood anatomy;
+Ciénaga de Santa Marta;10.842718;-74.500314;;
+Lago Gatún;9.183333;-79.883333;;
+Colombian Caribbean Coast;13.93;-72.36; Dinoflagellates;
+Colombian Pacific Coast;2.17;-79.25; Dinoflagellates;
+Laguna de Fúquene;5.459889;-73.745270; Invasive species, human disturbance;
+ODP Site 1239;0.666667;-82.083333;;
+Barbacoas Lake;6.740556;-74.243333; Invasive species, human disturbance;
+Bahía Honda;12.559276;-81.703668;
