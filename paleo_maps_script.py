@@ -1,5 +1,6 @@
 import base64
 import pandas as pd
+from PIL import Image
 import folium
 from folium import Map, Marker, TileLayer, Tooltip, Popup, Icon, IFrame, Html
 
@@ -27,24 +28,34 @@ basemaps = {
 paleo_map = Map(location=[4.740165, -73.980105], tiles=None, zoom_start=5)
 
 # token = open("mapbox_token.txt").read()
+paleo_map = Map(location=[4.740165, -73.980105], tiles=None, zoom_start=5)
+
 for index, row in df.iterrows():
     site = str(row['Site']).encode().decode('UTF-8')
     description = str(row['Description']).encode().decode('UTF-8')
     
     try:
-        image = 'images/' + str(row['Image'])
-        encoded = base64.b64encode(open(image, 'rb').read())
+        image = 'images/original/' + str(row['Image'])
+        image_res = Image.open(image)
+        image_res.thumbnail((300, 400))
+        image_res.save('images/resized/' + str(row['Image']))
+        encoded = base64.b64encode(open('images/resized/' + str(row['Image']), 'rb').read())
     except:
-        image = 'images/verjon.jpg'
-        encoded = base64.b64encode(open(image, 'rb').read())
-
+        image = 'images/original/verjon.jpg'
+        image_res = Image.open(image)
+        image_res.thumbnail((300, 400))
+        image_res.save('images/resized/verjon.jpg')    
+        encoded = base64.b64encode(open('images/resized/verjon.jpg', 'rb').read())
+    
+    width, height = image_res.size
+    
     html_popup="""
     <h2>{}</h2>
     <p>{}</p>
-    <img src="data:image/png;base64,{}" width='350'>
+    <img src="data:image/png;base64,{}" width='400px'>
     """.format
-    
-    iframe = IFrame(html_popup(site, description,encoded.decode('UTF-8')), width=400, height=500)
+#     print(image,width, height)
+    iframe = IFrame(html_popup(site, description,encoded.decode('UTF-8')), width=width*1.5, height=height*1.5, ratio='1%')
     popup = Popup(iframe, max_width=2650)
     
     html_tooltip = """
@@ -60,7 +71,6 @@ for index, row in df.iterrows():
     if site == 'Tropical Palynology and Paleoecology Lab':
         icon_color = 'darkpurple'
         icon_img = 'home'
-        
     Marker([row['Latitude'], row['Longitude']], tooltip=tooltip, popup=popup, icon=Icon(color=icon_color, icon=icon_img)).add_to(paleo_map)
     
 TileLayer('Stamen Watercolor', name='Stamen Watercolor', overlay=False, show=True).add_to(paleo_map)
@@ -69,5 +79,4 @@ basemaps['Google Terrain'].add_to(paleo_map)
 basemaps['Google Satellite'].add_to(paleo_map)
 
 folium.LayerControl().add_to(paleo_map)
-
 paleo_map.save('index.html')
