@@ -24,15 +24,19 @@ basemaps = {
     )
 }
 
-# token = open("mapbox_token.txt").read()
 paleo_map = Map(location=[4.740165, -73.980105], tiles=None, zoom_start=5)
 
+# token = open("mapbox_token.txt").read()
 for index, row in df.iterrows():
     site = str(row['Site']).encode().decode('UTF-8')
     description = str(row['Description']).encode().decode('UTF-8')
-#     image = row['Image']
-    image = 'images/verjon.jpg'
-    encoded = base64.b64encode(open(image, 'rb').read())
+    
+    try:
+        image = 'images/' + str(row['Image'])
+        encoded = base64.b64encode(open(image, 'rb').read())
+    except:
+        image = 'images/verjon.jpg'
+        encoded = base64.b64encode(open(image, 'rb').read())
 
     html_popup="""
     <h2>{}</h2>
@@ -40,7 +44,7 @@ for index, row in df.iterrows():
     <img src="data:image/png;base64,{}" width='350'>
     """.format
     
-    iframe = IFrame(html_popup(site, description,encoded.decode('UTF-8')), width=400, height=400)
+    iframe = IFrame(html_popup(site, description,encoded.decode('UTF-8')), width=400, height=500)
     popup = Popup(iframe, max_width=2650)
     
     html_tooltip = """
@@ -49,8 +53,15 @@ for index, row in df.iterrows():
     """.format
     
     tooltip = Tooltip(html_tooltip(site.encode('unicode_escape').decode('UTF-8')))
+
+    icon_color = 'darkgreen'
+    icon_img = 'leaf'
         
-    Marker([row['Latitude'], row['Longitude']], tooltip=tooltip, popup=popup, icon=Icon(color='darkgreen', icon='leaf')).add_to(paleo_map)
+    if site == 'Tropical Palynology and Paleoecology Lab':
+        icon_color = 'darkpurple'
+        icon_img = 'home'
+        
+    Marker([row['Latitude'], row['Longitude']], tooltip=tooltip, popup=popup, icon=Icon(color=icon_color, icon=icon_img)).add_to(paleo_map)
     
 TileLayer('Stamen Watercolor', name='Stamen Watercolor', overlay=False, show=True).add_to(paleo_map)
 TileLayer('Stamen Terrain', name='Stamen Terrain', overlay=False, show=False).add_to(paleo_map)
