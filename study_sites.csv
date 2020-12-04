@@ -1,21 +1,25 @@
 ﻿Site;Latitude;Longitude;Description;Image
 El Verjón Páramo;4.560674;-74.023756; d13C, 14C dating, environmental DNA;verjon.jpg
 Doña Juana Volcano;1.469315;-76.920484; Socio-ecological history, drones;dona_juana.JPG
-Guácharos Cave;1.365161;-76.221651; d13C, guano;
-Fluvio-volcanic Deposit in Pereira;4.68048;-75.63838; GDGTs, sub-fossil wood, ancient DNA, wood anatomy;Deposito_Pereira.jpeg
-Ciénaga de Santa Marta;10.842718;-74.500314;;
-Lago Gatún;9.183333;-79.883333;;
+Guácharos Cave;1.365161;-76.221651; d13C, guano;guacharos.jpeg
+Fluvio-volcanic Deposit in Pereira;4.68048;-75.63838;Sub-fossil wood, ancient DNA, wood anatomy, GDGTs;Deposito_Pereira.jpeg
+Ciénaga Grande de Santa Marta;10.842718;-74.500314;Socio-ecology of the Anthropocene;cienga_santa_marta.jpeg
+Lago Gatún;9.183333;-79.883333;Diatoms, Anthropocene;
 Colombian Caribbean Coast;13.93;-72.36; Dinoflagellates;caribbean_dinos.jpg
 Colombian Pacific Coast;2.17;-79.25; Dinoflagellates;pacific_dinos.jpg
 Fúquene Lake;5.459889;-73.74527; Invasive species, human disturbance;
 ODP 1239;0.666667;-82.083333;;ODP_1239.jpg
 Barbacoas Lake;6.740556;-74.243333; Invasive species, human disturbance;
 Bahía Honda;12.559276;-81.703668;;manglares_san andres.jpg
-Tatacoa Desert;3.232139;-75.157833;d13C;espinas_tatacoa.jpeg
+Tatacoa Desert;3.232139;-75.157833;d13C from cacti spines;espinas_tatacoa.jpeg
 Cuba archaeological site, Pereira;4.795103;-75.725772;;Cuba_archaeological_site.jpeg
 ODP 677B, Panama Basin;1.207333;-83.737;;ODP_677B.jpg
-ODP 1002, Cariaco Basin;10.706167;-65.169667;;marion_dufresne.png
+MD03-2622, Cariaco Basin;10.706167;-65.169667;;marion_dufresne.png
 Tequendama Outcrop Site;4.576191;-74.295981;;Tequendama_outcrop.png
-Nueva Esperanza Archaeological Site;4.572793;-74.281962;;Nueva Esperanza_archeological_site.jpeg
-Iguaque Páramo;5.671831;-73.460869;;iguaque.jpg
+Nueva Esperanza Archaeological Site;4.572793;-74.281962;Leaves stomata microscopy;Nueva Esperanza_archeological_site.jpeg
+Iguaque Páramo;5.671831;-73.460869;Moth pollination;iguaque.jpg
+Glacial Bogota;4.602319;-74.066099;;
+San Juana Lake;6.642222;-74.150556;Diatoms, Anthropocene;
+Cucunubá Lake;5.284318;-73.785089;Diatoms, Anthropocene;
+Cartagena Bay;10.339284;-75.565352;Blue carbon, marine grasslands;
 Tropical Palynology and Paleoecology Lab;4.600757;-74.065847;Department of Biological Science, Universidad de los Andes;paleolab.jpeg
